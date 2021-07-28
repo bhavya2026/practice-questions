@@ -1,20 +1,22 @@
 #include<iostream>
 using namespace std;
-int last_occur(int *arr,int low,int high,int key){
+int last_occur(int *arr,int size,int key){
+    int low=0,high=size-1;
+    while(low<=high){
 
-    while(low<high){
         int mid=(low+high)/2;
         if(arr[mid]<key)
             low=mid+1;
         else if(arr[mid]>key)
             high=mid-1;
-        else if(mid==high-1 || arr[mid]!=arr[mid+1])
+        else if(mid==size-1 || arr[mid]!=arr[mid+1])
             return mid;
-        else mid=low+1;
+        else low=mid+1;
     }
+    return -1;
 }
 int main(){
-     int size,val;
+     int size,val,value;
 
     cout<<"enter the array size";
 
@@ -32,7 +34,7 @@ int main(){
 
     cin>>val;
 
-    int value=last_occur(arr,0,size-1,val);
+    value=last_occur(arr,size,val);
 
     if(value==-1)
 

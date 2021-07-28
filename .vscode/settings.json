@@ -2,7 +2,8 @@
     "files.associations": {
         "bitset": "cpp",
         "chrono": "cpp",
-        "algorithm": "cpp"
+        "algorithm": "cpp",
+        "ostream": "cpp"
     },
     "files.watcherExclude": {
         "**/target": true
