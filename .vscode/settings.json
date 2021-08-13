@@ -3,7 +3,8 @@
         "bitset": "cpp",
         "chrono": "cpp",
         "algorithm": "cpp",
-        "ostream": "cpp"
+        "ostream": "cpp",
+        "iostream": "cpp"
     },
     "files.watcherExclude": {
         "**/target": true
